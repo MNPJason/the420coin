@@ -18,4 +18,4 @@ The420Coin (FRTWY) is a digital currency inspired by solutions first used in Das
 
 For building please see INSTALL / proper files in the doc subfolder.
 
-For more information please visit http://www.the420coin-coin.com
+For more information please visit http://www.the420coin.ch
