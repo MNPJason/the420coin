@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/the420coin_bg.qm</file>
+        <file alias="de">locale/the420coin_de.qm</file>
+        <file alias="en">locale/the420coin_en.qm</file>
+        <file alias="es">locale/the420coin_es.qm</file>
+        <file alias="fi">locale/the420coin_fi.qm</file>
+        <file alias="fr">locale/the420coin_fr.qm</file>
+        <file alias="it">locale/the420coin_it.qm</file>
+        <file alias="ja">locale/the420coin_ja.qm</file>
+        <file alias="pl">locale/the420coin_pl.qm</file>
+        <file alias="pt">locale/the420coin_pt.qm</file>
+        <file alias="ru">locale/the420coin_ru.qm</file>
+        <file alias="sk">locale/the420coin_sk.qm</file>
+        <file alias="sv">locale/the420coin_sv.qm</file>
+        <file alias="vi">locale/the420coin_vi.qm</file>
+        <file alias="zh_CN">locale/the420coin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/the420coin_zh_TW.qm</file>
+    </qresource>
+</RCC>

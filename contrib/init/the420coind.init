@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  the420coind The The420Coin Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: the420coind
+# processname: the420coind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/the420coind, see below
+if [ -f /etc/sysconfig/the420coind ]; then
+        . /etc/sysconfig/the420coind
+fi
+
+RETVAL=0
+
+prog=the420coind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/the420coind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/the420coind}
+
+# the420coind defaults to /usr/bin/the420coind, override with BITCOIND_BIN
+the420coind=${BITCOIND_BIN-/usr/bin/the420coind}
+
+# the420coind opts default to -disablewallet, override with BITCOIND_OPTS
+the420coind_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $the420coind $the420coind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

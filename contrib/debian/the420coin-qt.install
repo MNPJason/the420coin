@@ -1,0 +1,6 @@
+usr/local/bin/the420coin-qt usr/bin
+share/pixmaps/the420coin32.xpm usr/share/pixmaps
+share/pixmaps/the420coin16.xpm usr/share/pixmaps
+share/pixmaps/the420coin128.png usr/share/pixmaps
+debian/the420coin-qt.desktop usr/share/applications
+debian/the420coin-qt.protocol usr/share/kde4/services/

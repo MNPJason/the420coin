@@ -1,0 +1,33 @@
+# /etc/conf.d/the420coind: config file for /etc/init.d/the420coind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/the420coincore/the420coin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/the420coind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/the420coind.pid"
+
+# Where to write the420coind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/the420coind"
+
+# User and group to own the420coind process
+#BITCOIND_USER="the420coincore"
+#BITCOIND_GROUP="the420coincore"
+
+# Path to the420coind executable
+#BITCOIND_BIN="/usr/bin/the420coind"
+
+# Nice value to run the420coind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

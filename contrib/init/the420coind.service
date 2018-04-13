@@ -1,0 +1,22 @@
+[Unit]
+Description=The420Coin's distributed currency daemon
+After=network.target
+
+[Service]
+User=the420coincore
+Group=the420coincore
+
+Type=forking
+PIDFile=/var/lib/the420coind/the420coind.pid
+ExecStart=/usr/bin/the420coind -daemon -pid=/var/lib/the420coind/the420coind.pid \
+-conf=/etc/the420coincore/the420coin.conf -datadir=/var/lib/the420coind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
