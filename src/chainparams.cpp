@@ -101,7 +101,7 @@ public:
         consensus.BIP34Hash = uint256S("0x0000e58bb5b736b3a33ae8666fa2d63e036fb42e56eb5b6e5ebcf3bb73dd4e6");
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
         consensus.nPowTargetTimespan     =  60 * 60 * 24; // The420Coin: 1 day
-        consensus.nPowTargetSpacing =  120; // The420Coin: 2 min
+        consensus.nPowTargetSpacing =  420; // The420Coin: 420 sec
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nPowDGWHeight = 10;   //Dark Grav Wave block count recal 
