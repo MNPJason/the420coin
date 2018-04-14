@@ -1,7 +1,6 @@
 # The420Coin 0.12.2
 
-The420Coin (FRTWY) is a digital currency inspired by solutions first used in Dash. Decentralised network of nodes secures and cryptographically confirms every transaction involving FRTWY. Solution offered by The420Coin gives its users groundbreaking opportunities. First, InstaSend transactions can compete with traditional instantaneous payments methods such as credit cards, while still being secured by Masternode consensus. Second, PrivateSend process ensures the420coin privacy of your transactions by obscuring their origins. Token issuance and reward division was carefully designed in a way to maximize utility for all The420Coin stakeholders and incentivise the community.
 
 For building please see INSTALL / proper files in the doc subfolder.
 
-For more information please visit http://www.the420coin-coin.com
+For more information please visit http://www.420coin.ch

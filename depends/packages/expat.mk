@@ -1,6 +1,6 @@
 package=expat
 $(package)_version=2.1.0
-$(package)_download_path=http://the420coin-coin.com
+$(package)_download_path=http://absolute-coin.com
 $(package)_file_name=$(package)-$($(package)_version).tar.gz
 $(package)_sha256_hash=823705472f816df21c8f6aa026dd162b280806838bb55b3432b0fb1fcca7eb86
 
