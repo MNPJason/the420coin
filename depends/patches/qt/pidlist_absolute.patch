@@ -8,14 +8,14 @@ diff -dur old/qtbase/src/plugins/platforms/windows/qwindowscontext.h new/qtbase/
 +#if defined(Q_CC_MINGW) && (!defined(__MINGW64_VERSION_MAJOR) || __MINGW64_VERSION_MAJOR < 3)
 +    typedef HRESULT (WINAPI *SHGetKnownFolderIDList)(const GUID &, DWORD, HANDLE, ITEMIDLIST **);
 +#else
-     typedef HRESULT (WINAPI *SHGetKnownFolderIDList)(const GUID &, DWORD, HANDLE, PIDLIST_THE420COIN *);
+     typedef HRESULT (WINAPI *SHGetKnownFolderIDList)(const GUID &, DWORD, HANDLE, PIDLIST_ABSOLUTE *);
 +#endif
      typedef HRESULT (WINAPI *SHGetStockIconInfo)(int , int , _SHSTOCKICONINFO *);
      typedef HRESULT (WINAPI *SHGetImageList)(int, REFIID , void **);
 +#if defined(Q_CC_MINGW) && (!defined(__MINGW64_VERSION_MAJOR) || __MINGW64_VERSION_MAJOR < 3)
 +    typedef HRESULT (WINAPI *SHCreateItemFromIDList)(const ITEMIDLIST *, REFIID, void **);
 +#else
-     typedef HRESULT (WINAPI *SHCreateItemFromIDList)(PCIDLIST_THE420COIN, REFIID, void **);
+     typedef HRESULT (WINAPI *SHCreateItemFromIDList)(PCIDLIST_ABSOLUTE, REFIID, void **);
 +#endif
  
      SHCreateItemFromParsingName sHCreateItemFromParsingName;
@@ -30,7 +30,7 @@ diff -dur old/qtbase/src/plugins/platforms/windows/qwindowsdialoghelpers.cpp new
 +#if defined(Q_CC_MINGW) && (!defined(__MINGW64_VERSION_MAJOR) || __MINGW64_VERSION_MAJOR < 3)
 +        ITEMIDLIST *idList;
 +#else
-         PIDLIST_THE420COIN idList;
+         PIDLIST_ABSOLUTE idList;
 +#endif
          HRESULT hr = QWindowsContext::shell32dll.sHGetKnownFolderIDList(uuid, 0, 0, &idList);
          if (FAILED(hr)) {
